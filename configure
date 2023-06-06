@@ -1206,9 +1206,9 @@ if [[ "${CONFIG[ISAL]}" = "y" ]]; then
 	else
 		ISAL_OPTS=()
 	fi
-	echo -n "Configuring ISA-L (logfile: $ISAL_LOG)..."
+	echo -n "Configuring ISA-L (logfile: $ISAL_LOG)... (使用修改后的configure_备份) "
 	./autogen.sh &> $ISAL_LOG
-	./configure CFLAGS="-fPIC -g -O2" "${ISAL_OPTS[@]}" --enable-shared=no >> $ISAL_LOG 2>&1
+	./configure_备份 CFLAGS="-fPIC -g -O2" "${ISAL_OPTS[@]}" --enable-shared=no >> $ISAL_LOG 2>&1
 	echo "done."
 	cd $rootdir
 else

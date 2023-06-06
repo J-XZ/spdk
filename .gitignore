@@ -40,3 +40,5 @@ test_completions.txt
 timing.txt
 test/common/build_config.sh
 .coredump_path
+isa-l
+.idea
